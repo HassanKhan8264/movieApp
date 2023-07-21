@@ -7,35 +7,39 @@
 </div> -->
 <div class="container">
     <div class="row outer">
-        
+
         <h2>Movie Details</h2>
         <div class="card mb-3">
             <i routerLink="" class="bi bi-arrow-left icon"></i>
-        <div class="row g-0 detail-outer">
-            <div class="col-md-4 img-part">
-                <!-- <div class="background-image" [ngStyle]="{'background-image': 'url(' + imageUrl + ')'}"></div> -->
+            <div class="row g-0 detail-outer">
+                <div class="col-md-4 img-part">
+                    <!-- <div class="background-image" [ngStyle]="{'background-image': 'url(' + imageUrl + ')'}"></div> -->
 
-                <img class="detail-img" [src]="'https://image.tmdb.org/t/p/w500/' + movieDetails.poster_path" alt="{{ movieDetails.title }}">
+                    <img class="detail-img" [src]="'https://image.tmdb.org/t/p/w500/' + movieDetails.poster_path"
+                        alt="{{ movieDetails.title }}">
+                </div>
+                <div class="col-md-8 inner-text">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ movieDetails.title }}</h3>
+                        <p class="card-text"><strong>Description:</strong> {{ movieDetails.overview }}</p>
+                        <p class="card-text"><strong>Release Date:</strong> {{ movieDetails.release_date }}</p>
+                        <p class="card-text"><strong>Status:</strong> {{ movieDetails.status }}</p>
+                        <p class="card-text"><strong>Runtime:</strong> {{ movieDetails.runtime}}</p>
+                        <h5>Languages</h5>
+                        <div *ngFor="let lang of movieDetails.spoken_languages">
+                            <p class="card-text" style="margin-top: 20xp;"> {{ lang.english_name}}</p>
+                        </div>
+                        <h5 style="margin-top: 10px;">Country</h5>
+                        <div *ngFor="let lang of movieDetails.production_countries">
+                            <p class="card-text" style="margin-top: 20xp;"> {{ lang.name}}</p>
+                        </div>
+                        <!-- <div class="btn" style="margin-top: 10px;"> -->
+                            <button style="margin-top: 10px;" (click)="watchTrailer()" type="button" class="btn btn-primary">Watch Trailer</button>
+                        <!-- </div> -->
+                    </div>
+                </div>
             </div>
-            <div class="col-md-8 inner-text">
-                <div class="card-body">
-                    <h3 class="card-title">{{ movieDetails.title }}</h3>
-                    <p class="card-text"><strong>Description:</strong> {{ movieDetails.overview }}</p>
-                    <p class="card-text"><strong>Release Date:</strong> {{ movieDetails.release_date }}</p>
-                    <p class="card-text"><strong>Status:</strong> {{ movieDetails.status }}</p>
-                    <p class="card-text"><strong>Runtime:</strong> {{ movieDetails.runtime}}</p>
-                    <h5>Languages</h5>
-                    <div *ngFor="let lang of movieDetails.spoken_languages">
-                    <p class="card-text" style="margin-top: 20xp;"> {{ lang.english_name}}</p>
-                    </div> 
-                    <h5 style="margin-top: 10px;">Country</h5>
-                    <div *ngFor="let lang of movieDetails.production_countries">
-                        <p class="card-text" style="margin-top: 20xp;"> {{ lang.name}}</p>
-                        </div>      
-          </div>
         </div>
     </div>
-</div>
-</div>
 </div>
 <app-footer></app-footer>
