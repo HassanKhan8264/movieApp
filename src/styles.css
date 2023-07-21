@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+body{
+    background-color: #f3f0eb;
+}
+.row{
+    margin-top: 50px;
+}
+p{
+    cursor: pointer;
+}
+img{
+    cursor: pointer;
+}

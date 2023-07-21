@@ -1,0 +1,13 @@
+.search-bar{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin-left: 100px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

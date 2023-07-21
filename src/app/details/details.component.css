@@ -1,0 +1,29 @@
+.detail-img{
+    width: 90% !important;
+    height: 100% !important;
+    margin: 20px;
+    border-radius: 10px;
+}
+.outer{
+    flex-wrap: wrap;
+}
+.detail-outer{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+.img-part{
+    /* border: 1px solid red; */
+    /* width:30%; */
+}
+.inner-text{
+    /* border: 1px solid red; */
+    /* width:65%; */
+
+}
+.icon{
+    font-size: 30px;
+}

@@ -1,0 +1,24 @@
+<app-header></app-header>
+<!-- <div *ngFor="let movie of popularMovies">
+  <h2 >che</h2>
+  <h3>{{ movie.title }}</h3>
+  <img (click)="showdetails(movie.id)" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+  <p>{{movie.title}}</p>
+  <p>{{ movie.overview }}</p>
+  
+</div> -->
+<div class="container">
+  <div class="row">
+    <h2>Popular Movies</h2>
+    <div class="col-md-4 mb-4" *ngFor="let movie of popularMovies">
+      <div class="card">
+        <img class="card-img-top" (click)="showdetails(movie.id)" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{ movie.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.title }}</h5>
+          <p class="card-title" (click)="showdetails(movie.id)">Details</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

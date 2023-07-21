@@ -1,0 +1,18 @@
+1. Movie App (Angular)
+-------------------
+
+Create a new angular application (use the latest version). This application is based on movies. Use latest Bootstrap for style rendering. Each component should have separate individual css file for it's own css and use the global stylesheet for all the possible similar classes used throughout the application. Use the interface(s) and service(s) for the `movie`.
+
+A movie interface should have the properties as: title, image, cast (there can be multiple actors/actresses), description, is_featured and release_date. Assign appropriate datatypes to each property. Use movie service for any processes (as in the getters and setters). Use separate components for differnt purposes.
+
+Must to be applied:
+1. The application should be fully responsive from large (PCs and laptops) to mid (tablets) to small (mobile) screens.
+2. The application should be divided into header, main body (common) and the footer.
+3. Use router for navigation.
+
+Description of the application:
+There will be a dashboard initially where the featured movies would be in a separate row at the top (after the header). After the featured movies, there will be all the movies released based on the release date (month, year) in descending order. Clicking a movie should open another page where it tells the movie details and a few images of it, along with all the properties of the movie interface. User should also be able to buy movies and add to cart. Same movie can not be bought into the cart. The cart would just include the movies in a listed form.
+
+Plus points:
+- Implement Tailwind CSS instead of Bootstrap.
+- Write the frontend APIs assuming they would be connected to backend application.
