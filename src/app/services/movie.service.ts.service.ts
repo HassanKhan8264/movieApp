@@ -20,19 +20,19 @@ export class MovieServiceTsService {
 
   constructor(private http: HttpClient) {}
 
-  private getHeaders(): HttpHeaders {
-    return new HttpHeaders({
-      'Content-Type': 'application/json',
-    });
-  }
+  // private getHeaders(): HttpHeaders {
+  //   return new HttpHeaders({
+  //     'Content-Type': 'application/json',
+  //   });
+  // }
 
   getPopularMovies(): Observable<any> {
     const url = `${this.apiUrl}/movie/popular?api_key=${this.apiKey}`;
-    return this.http.get<any>(url, { headers: this.getHeaders() });
+    return this.http.get<any>(url);
   }
 
   getMovieDetails(movieId: number): Observable<any> {
     const url = `${this.apiUrl}/movie/${movieId}?api_key=${this.apiKey}`;
-    return this.http.get<any>(url, { headers: this.getHeaders() });
+    return this.http.get<any>(url);
   }
 }
