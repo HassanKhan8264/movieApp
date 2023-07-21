@@ -10,12 +10,13 @@
 <div class="container">
   <div class="row">
     <h2>Popular Movies</h2>
-    <div class="col-md-4 mb-4" *ngFor="let movie of popularMovies">
+    <div class="col-md-4 mb-4" *ngFor="let movie of popularMovies" (click)="showdetails(movie.id)">
       <div class="card">
-        <img class="card-img-top" (click)="showdetails(movie.id)" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{ movie.title }}">
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{ movie.title }}">
         <div class="card-body">
           <h5 class="card-title">{{ movie.title }}</h5>
-          <p class="card-title" (click)="showdetails(movie.id)">Details</p>
+          <strong>Rating {{movie.vote_average}}</strong>
+          <p class="card-title">{{ movie.release_date | date: "yyyy"}}</p>
         </div>
       </div>
     </div>
